@@ -1,0 +1,52 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#0a0e27" stroke="#00ff88" stroke-width="2"/>
+  
+  <!-- Code bracket left -->
+  <path d="M 60 70 L 45 85 L 45 115 L 60 130" 
+        stroke="#00ff88" 
+        stroke-width="4" 
+        fill="none" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <!-- Code bracket right -->
+  <path d="M 140 70 L 155 85 L 155 115 L 140 130" 
+        stroke="#00ff88" 
+        stroke-width="4" 
+        fill="none" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <!-- Terminal cursor/line -->
+  <rect x="70" y="90" width="60" height="4" fill="#00ff88" rx="2"/>
+  <rect x="70" y="106" width="45" height="4" fill="#00ff88" opacity="0.6" rx="2"/>
+  
+  <!-- V letter stylized as terminal prompt -->
+  <text x="100" y="115" 
+        font-family="monospace" 
+        font-size="48" 
+        font-weight="bold" 
+        fill="#00ff88" 
+        text-anchor="middle">V</text>
+  
+  <!-- Small dots (representing code/terminal) -->
+  <circle cx="75" y="135" r="2" fill="#00ff88" opacity="0.5"/>
+  <circle cx="85" y="135" r="2" fill="#00ff88" opacity="0.5"/>
+  <circle cx="95" y="135" r="2" fill="#00ff88" opacity="0.5"/>
+  
+  <!-- Glow effect -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g filter="url(#glow)">
+    <circle cx="100" cy="100" r="3" fill="#00ff88"/>
+  </g>
+</svg>
